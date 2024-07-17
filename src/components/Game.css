@@ -1,0 +1,63 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+
+  .field {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center horizontally */
+  }
+
+  .box {
+    width: 250px;
+    height: 290px;
+    border: 2px solid black;
+    margin: 20px;
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center contents horizontally */
+    align-items: center; /* Center contents vertically */
+    position: relative;
+  }
+
+  .card-wrapper {
+    width: 100%; /* Fill the width of the box */
+    height: 100%; /* Fill the height of the box */
+    position: absolute; /* Position it absolutely inside the box */
+    top: 0;
+    left: 0;
+}
+
+  
+  .card {
+    width: 200px;
+    height: 200px;
+   
+    border: 1px solid black;
+    border-radius: 8px;
+    margin: 20px;
+    display: inline-block;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    cursor: pointer; /* Make the cards clickable */
+   
+  }
+
+  .enemy {
+    background-color: red;
+  }
+
+  .player {
+    display: flex;
+  }
+
+  .dance {
+    animation: dance 1.5s infinite; /* Apply the dance animation */
+}
+
+@keyframes dance {
+    0%, 100% { transform: translateY(0); } /* Start and end at normal position */
+    50% { transform: translateY(-30px); } /* Move up */
+} 
